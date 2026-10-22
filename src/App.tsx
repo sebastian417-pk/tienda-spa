@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import CarritoProvider from './CarritoProvider'
 import Navbar from './Navbar'
@@ -9,7 +9,7 @@ import Carrito from './Carrito'
 function App() {
   return (
     <CarritoProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <main className="contenido">
           <Routes>
@@ -19,7 +19,7 @@ function App() {
             <Route path="*" element={<h2>Página no encontrada</h2>} />
           </Routes>
         </main>
-      </BrowserRouter>
+      </HashRouter>
     </CarritoProvider>
   )
 }
