@@ -1,32 +1,20 @@
-# React + TypeScript + Vite
+# Tienda SPA: React Router + Estado Global
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicación de una sola página que simula una tienda básica, hecha con React, TypeScript y Vite.
 
-Currently, two official plugins are available:
+**Autor:** Sebastian Bejarano
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Página en vivo:** https://sebastian417-pk.github.io/tienda-spa/
 
-## React Compiler
+## Qué hace
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Tres vistas con React Router: Inicio, Productos y Carrito.
+- El carrito vive en un estado global con Context API.
+- El contador del carrito en la barra de navegación se actualiza en tiempo real desde cualquier vista.
 
-## Expanding the Oxlint configuration
+## Cómo ejecutarlo
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
